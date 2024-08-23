@@ -29,7 +29,6 @@ const MercadoPagoFormComponent: React.FC<MercadoPagoFormComponentProps> = ({
   onSubmitSuccess,
   formikRef,
 }) => {
-  debugger
   const { error } = useMercadoPagoInstance(apiKey);
   const [cardNumber, setCardNumber] = useState("");
   const { paymentMethods, installments, paymentInfo } =
@@ -47,7 +46,7 @@ const MercadoPagoFormComponent: React.FC<MercadoPagoFormComponentProps> = ({
   if (error || errorFetch) {
     return <ErrorMessage message={error?.message || errorFetch} />;
   }
-
+  console.log("here")
   const handleSubmit = async (
     values: MercadoPagoFormValues,
     { setSubmitting }: FormikHelpers<MercadoPagoFormValues>
