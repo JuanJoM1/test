@@ -46,7 +46,7 @@ const MercadoPagoFormComponent: React.FC<MercadoPagoFormComponentProps> = ({
   if (error || errorFetch) {
     return <ErrorMessage message={error?.message || errorFetch} />;
   }
-  console.log("here")
+  console.log("here222")
   const handleSubmit = async (
     values: MercadoPagoFormValues,
     { setSubmitting }: FormikHelpers<MercadoPagoFormValues>
